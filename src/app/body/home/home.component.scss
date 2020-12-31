@@ -1,0 +1,406 @@
+//common section
+
+.inherit {
+  background-color: inherit;
+}
+.height-width-100 {
+  height: 100%;
+  width: 100%;
+}
+.home-title {
+  font-size: 36px;
+  padding-bottom: 45px;
+  text-transform: uppercase;
+  font-family: Candara;
+  text-align: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.no-border {
+  border: 0px;
+}
+
+// h1 {
+//   display: block;
+//   font-size: 3em;
+//   margin-top: 0.67em;
+//   margin-bottom: 0.67em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   line-height: 1.6;
+//   // font-weight: 600;
+//   font-weight: bold;
+// }
+
+// h2 {
+//   display: block;
+//   font-size: 1.5em;
+//   margin-top: 0.83em;
+//   margin-bottom: 0.83em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   font-weight: bold;
+// }
+
+// h3 {
+//   display: block;
+//   font-size: 1.17em;
+//   margin-top: 1em;
+//   margin-bottom: 1em;
+//   margin-left: 0;
+//   margin-right: 0;
+//   color:white;
+//   font-weight: bold;
+// }
+
+// Home CSS
+
+.layer {
+  background: #1c416a9e; // #1c416a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.btn-primary {
+  // background-color: #fb632b !important;
+  background-color: #c8dd82 !important; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.banner {
+  background: url(../../../assets/Images/booksIn.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  // background-color: rgb(151, 148, 148);
+  // background-blend-mode: difference;
+  width: auto;
+  //background-opacity: 0.5;
+  //-moz-backface-visibility: hidden;
+  //background-color: transparent;
+}
+
+
+//Serices CSS
+.service {
+  cursor: pointer;
+}
+.activeService {
+  // background-color: #fb632b;
+  background-color: #c8dd82;
+  border-radius: 5px;
+}
+
+// How it works
+.image{
+  // border: 1px solid black;
+   border-radius: 5px;
+   overflow: hidden;
+   margin-left: 10px;
+   margin-right: 10px;
+ }
+ .image img {
+  transition: all 2s ease-in-out;
+  border-radius: 5px;
+}
+ .image:hover img {
+     transform: scale(1.5, 1.5);
+     cursor: pointer;
+    border-radius: 5px;
+ }
+.img-carousel {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #ffffff;
+}
+.student-tutor-flow{
+  border: 1px solid #c8dd82;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.flowshadow {
+    box-shadow: 0 .15px 10px rgba(0,0,0,.5)!important;
+}
+.verticalAlignStudent{
+  color: #1c416a;
+  transform: rotate(270deg);
+  letter-spacing: 7px;
+  margin-top: 240%;
+ }
+ .verticalAlignTutor{
+  color: #1c416a;
+  transform: rotate(270deg);
+  letter-spacing: 7px;
+  margin-top: 240%;
+  margin-top: 150%;
+ }
+ .tutorLine{
+   width: 2px;
+   height: 215px;
+   background: #1c416a;
+   border: none;
+   margin-top: 10px;
+ }
+.numdiv{
+  background-color: #1c416a;
+  color: white;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  align-self: center;
+  padding: auto;
+  text-align: center;
+  position: absolute;
+  margin-left: -88%;
+  }
+  .stepDiv{
+  padding-top: 4%;
+  }
+  .howItWorksImg{
+    text-align: center;
+  }
+  .greenBG{
+    background-color: #c8dd82;
+  }
+  .shotLine{
+    width: 2px; 
+    height: 50px;
+    background: #1c416a;
+    border: none;
+    margin-bottom: 10px;
+  }
+  .imgdiv{
+    position: absolute;
+    margin-left: 11%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .textdiv{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .studentLine{
+    width: 2px;
+    height: 170px;
+    background: #1c416a;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+// FAQ CSS
+.btn {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.btn:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.faq {
+  // background-color: lavender;
+  // background: transparent;
+  background: url(../../../assets/Images/banner.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+.template_faq {
+  background: #edf3fe none repeat scroll 0 0;
+}
+.panel-group {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 3px;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.04);
+  margin-bottom: 0;
+  padding: 30px;
+}
+#accordion .panel {
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 15px 10px;
+}
+#accordion .panel-heading {
+  border-radius: 30px;
+  padding: 0;
+}
+#accordion .panel-title a {
+  background: #1c416a none repeat scroll 0 0;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 20px 12px 50px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed {
+  background: #c8dd82 none repeat scroll 0 0;
+  // background:#fb632b none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #333;
+}
+#accordion .panel-title a::after,
+#accordion .panel-title a.collapsed::after {
+  background: #1c416a none repeat scroll 0 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+  color: #fff;
+  content: "";
+  font-family: fontawesome;
+  font-size: 25px;
+  height: 55px;
+  left: -20px;
+  line-height: 55px;
+  position: absolute;
+  text-align: center;
+  top: -5px;
+  transition: all 0.3s ease 0s;
+  width: 55px;
+}
+#accordion .panel-title a.collapsed::after {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  color: #333;
+  content: "";
+}
+#accordion .panel-body {
+  background: transparent none repeat scroll 0 0;
+  border-top: medium none;
+  padding: 20px 25px 10px 9px;
+  position: relative;
+}
+#accordion .panel-body p {
+  border-left: 1px dashed #8c8c8c;
+  padding-left: 25px;
+}
+
+#myVideo {
+  //position: fixed;
+  position: absolute;
+  right: 0;
+  // bottom: 0;
+  // top: 0;
+  left: 0;
+  min-width: 100%;
+  height: inherit;
+  // min-height: 100%;
+}
+//end of the team css
+// .carousel-inner :focus{
+// border: none;
+// }
+
+// Contact Us
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: grey 1px solid !important;
+  color: #1c416a;
+  // box-shadow: #1c416a6e 2px 2px;
+}
+
+.send {
+  // border: #1c416a 1px solid ;
+  color: #1c416a;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #93a35d;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.team {
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  color: white;
+  text-align: center;
+  opacity: .7;
+  font-family: Verdana, sans-serif;
+  border: 3px solid rgba(0,0,0,.3); 
+  margin-bottom: 30px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.title{
+  animation: roll 3s 1;
+  //transform: rotate(0deg);
+  background-color: #93a35d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-md-3{
+  text-align: center;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

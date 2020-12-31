@@ -1,0 +1,26 @@
+[
+    {
+      "title":"Learn Better | Learn Smarter",
+      "data1":"Achive academic excellence with our superior educational packs, experienced and verified Tutors",
+      "data2":"and free doubt solving forum",
+      "img":"../../../assets/Images/Home/home-1.jpg"
+    },
+    {
+      "title":"STUDY",
+      "data1":"Learn anything at anytime!",
+      "data2":"We help you find the tuter you want at the fingertip. Anytime, Anywhere!",
+      "img":"../../../assets/Images/Home/home-2.jpg"
+    },
+    {
+      "title":"TEACH",
+      "data1":"We help you Teach and Earn money as per your experties.",
+      "data2":"something",
+      "img":"../../../assets/Images/Home/home-3.jpg"
+    },
+    {
+        "title":"Assignments",
+        "data1":"Facing Difficulty in acadamic projects?",
+        "data2":"Post the kind of project you need help with, and we will get you the best in the field, to help you!",
+        "img":"../../../assets/Images/Home/home-2.jpg"
+      }
+]

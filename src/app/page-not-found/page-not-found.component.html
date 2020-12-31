@@ -1,0 +1,58 @@
+<head>
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  </head>
+  
+  <section id="PNF_Home">
+    <div class="container-fluid">
+      <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let dataS of homeData;
+            index as i;first as isFirst">
+            <div class="layer"></div>
+            <img src={{dataS.img}} class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1>{{dataS.title}}</h1>
+              <p>{{dataS.data1}}</p>
+              <p>{{dataS.data2}}</p><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section id="PNF">
+    <br><br>
+    <div class="container card no-border">
+      <div class="card-body">
+        <div class="row card-title">
+          <div class="col-12">
+            <h2 class="home-title">! OOOOPsssss ! Page  or Feature Not Found ! </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p>
+            Tuitionbell provides a platform for students who are facing hurdles in their academics or eager to learn
+            something new,
+            to find exemplary and trustworthy tutors in their locality through interactive web and mobile applications to
+            enhance
+            their knowledge and skills.<br> We strive to provide high quality education to the students through one-on-one
+            interactive
+            sessions with the tutor at their door step or through online live video sessions at the convenient time
+            scheduled by the student and the tutor.
+            <br> We provide a great platform of learning opportunities to students with progress tracking and an earning
+            opportunity to tutors.
+            <br> Tuitionbell also provides an open question forum to discuss and exchange knowledge on various academic
+            and general topics and
+            to provide advices regarding assignments and academic projects.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,63 @@
+[
+    [
+      {
+        "header":"vedavyas",
+        "position":"CFO",
+        "discription":"A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRK75yOImoF-jRTnx-OjQVl7By4alsTf11vg&usqp=CAU"
+      },
+      {
+        "header":"Abishek Parasa",
+        "position":"CFO",
+        "discription":"This is because paragraphs show a reader where the subdivisions of an essay begin and end, and thus help the reader see the organization of the essay and grasp its main points.",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRK75yOImoF-jRTnx-OjQVl7By4alsTf11vg&usqp=CAU"
+      },
+      {
+        "header":"Lalith Kumar",
+        "position":"CFO",
+        "discription":"Paragraphs can contain many different kinds of information. A paragraph could contain a series of brief examples or a single long illustration of a general point. It might describe a place, character, or process; narrate a series of events;",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMndfEl9Hspt1UTfSThp4zNXOTqbL1-M-wwg&usqp=CAU"
+      }
+    ],
+    [
+      {
+        "header":"Srusthee Chirame",
+        "position":"Front-End Enggineer",
+        "discription":"Devlopment",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRh2Oxp1RbEhhnFYlNNCg5WCjjsGVxiEF5K8Q&usqp=CAU"
+      },
+      {
+        "header":"Arjit Roy",
+        "position":"CTO",
+        "discription":"Devlopment",
+        "img":"https://png.pngtree.com/png-clipart/20190516/original/pngtree-bank-securities-insurance-company-employee-official-business-png-image_3802223.jpg"
+      },
+      {
+        "header":"Akanksha Thala",
+        "position":"Enggineer",
+        "discription":"Devlopment",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOQpvp5scL0Fh5HhTlBghBEolqO0vLXvpVZQ&usqp=CAU"
+      }
+    ],
+    [
+      {
+        "header":"Harika Reddy",
+        "position":"Front End Enggineer",
+        "discription":"Devlopment",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRh2Oxp1RbEhhnFYlNNCg5WCjjsGVxiEF5K8Q&usqp=CAU"
+      },
+      {
+        "header":"Tejasvini Kadam",
+        "position":"python Enggineer",
+        "discription":"Devlopment",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOQpvp5scL0Fh5HhTlBghBEolqO0vLXvpVZQ&usqp=CAU"
+      },
+      {
+        "header":"vedavalli Alaparthi",
+        "position":"Front End Enggineer",
+        "discription":"Bussiness",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMndfEl9Hspt1UTfSThp4zNXOTqbL1-M-wwg&usqp=CAU"
+      }
+    ]
+  ]
+  

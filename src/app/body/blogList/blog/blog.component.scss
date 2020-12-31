@@ -1,0 +1,35 @@
+.headerBarBlog{
+  height: 50px;
+  background-color: #1c416a;
+}
+
+.blog-head{
+  text-align: center;
+}
+
+.view{
+  cursor: pointer;
+}
+
+.table{
+  max-height: 28px;
+}
+
+.description{
+  white-space: pre-line;
+}
+
+.tableRow{
+  text-align: center;
+  outline: none;
+}
+
+.active {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.similar-blog {
+  text-align: center;
+  font-style: italic;
+}

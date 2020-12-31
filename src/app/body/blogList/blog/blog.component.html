@@ -1,0 +1,73 @@
+
+<div class="headerBarBlog">
+</div>
+
+<div class="row">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-sm-3">
+        <br><br><br><br>
+        <h5 class="similar-blog"> Similar Blogs </h5><br>
+
+        <table class="table" cellspacing="0">
+          <tbody>
+            <tr *ngFor="let blog of blogs, let i = index" [routerLink]="['/blogs', blog.id]" (click)="updateId(blog.id)"
+              class="tableRow">
+              <td [ngClass]="{'active': id == i}">{{ blog.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-1">
+      </div>
+
+      <div class="col-sm-8">
+        <div>
+          <h3 class="blog-head">{{blogs[id].name}}</h3>
+          <div class="view hm-zoom z-depth-2" *ngIf="blogs[id].blogImg">
+            <img [src]="blogs[id].blogImg" [alt]="blogs[id].name" width="100%" class="img-fluid rounded">
+          </div>
+          <br>
+          <div *ngIf="blogs[id].subParts">
+            <div *ngFor="let s of blogs[id].subParts">
+              <b>{{s.title}}</b>
+              <br>
+              <br>
+              <div *ngIf="s.data">
+                <div *ngFor="let par of s.data">
+                  {{par}}<br><br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table" cellspacing="0">
+            <tbody>
+              <tr *ngIf="blogs[id].sources">
+                <th> Sources:</th>
+                <td>
+                  <ul>
+                    <li *ngFor="let s of blogs[id].sources">
+                      <a href="{{s}}">{{s}}</a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr *ngIf="blogs[id].alsoCheck">
+                <th> Also Check:</th>
+                <td>
+                  <ul>
+                    <li *ngFor="let s of blogs[id].alsoCheck">
+                      <div *ngIf="s.title">{{s.title}}<br></div>
+                      <a href="{{s.link}}">{{s.link}}</a>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

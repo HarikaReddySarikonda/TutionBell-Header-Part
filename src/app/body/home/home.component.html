@@ -1,0 +1,322 @@
+
+<div> 
+  <section id="home" #home>
+    <div class="container-fluid">
+      <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item" [ngClass]="{active:isFirst}" *ngFor="let dataS of homeData;
+          index as i;first as isFirst">
+            <div class="layer"></div>
+            <img src={{dataS.img}} class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h1>{{dataS.title}}</h1>
+              <p>{{dataS.data1}}</p>
+              <p>{{dataS.data2}}</p><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-us" #aboutus>
+    <br><br>
+    <div class="container card no-border">
+      <div class="card-body">
+        <div class="row card-title">
+          <div class="col-12">
+            <h2 class="home-title">! About Us ! </h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p *ngFor="let context of aboutUs">
+          {{context}}
+          </p>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-md-6 offset-md-5">
+          <div class="team title">The Team</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 offset-md-2" *ngFor="let data of member">
+          <h5>{{data.name}}</h5>
+          <p>{{data.role}}</p>
+          <div class="col-xs-7">
+            <img class='img-circle' src={{data.img}}>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" #services>
+    <br><br>
+    <div class="container card no-border">
+      <div class="card-body">
+        <div class="row card-title">
+          <div class="col-12">
+            <h2 class="home-title">! Services we provide ! </h2>
+          </div>
+        </div>
+        <div class="row card-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <ul>
+                  <li class="row" *ngFor="let dataS of serviceData, let i = index" (mouseover)="showTab(i,dataS)">
+                    <div class="col-12" [ngClass]="{'activeService': selectedIndex==i }">
+                      <div class="card service no-border inherit">
+                        <div class="card-body inherit">
+                          <h5 class="card-title">{{dataS.title}}</h5>
+                          <p class="card-text">{{dataS.data}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div *ngFor="let dataS of serviceData, let i = index">
+                  <img src={{dataS.img}} @myAni *ngIf="i == selectedIndex" class="slide height-width-100">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" #howitworks  >
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="home-title">! How It Works ! </h2>
+        </div>
+      </div>
+      <div class="row ">{{shallSpin}}
+        <div class="col-6 "  [@hwItWWrks]='shallSpin'  (click)="decide()">
+           <div class="image howItWorksImg" >
+            <img  src="../../../assets/Images/how-it-works/teacher.jpg" alt="" style="height: auto; width:  auto;">
+          </div> 
+          <br> 
+          <div class="row student-tutor-flow flowshadow" >
+            <div class="col-2 greenBG">
+              <hr class="shotLine"/>
+              <h2 class="verticalAlignTutor align-middle" >{{person}}</h2>
+              <hr class="tutorLine"/>
+            </div>
+            <div class="col-10 container ">
+              <div class="row " *ngFor="let step of studentFlow;index as i">
+                <div class=" col-1 greenBG">
+                </div>
+                <div class="col-1 stepDiv">
+                  <div class="img-carousel numdiv shadow">
+                    <span>{{i+1}}</span>
+                  </div>
+                </div>
+                <div class="imgdiv col-1">
+                  <!-- <img src="{{step.image}}" title="img" class="img-carousel"> -->
+                </div>
+                <div class="textdiv col-9">
+                  <h6>
+                    {{step.title}}
+                  </h6>
+                  <p>
+                    {{step.discription}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-2"></div> -->
+        <!-- <div class="col-6">
+          <div class="row student-tutor-flow flowshadow">
+            <div class="col-2 greenBG">
+              <hr class="studentLine"/>
+                <h2 class="verticalAlignStudent align-middle">STUDENT</h2>
+              <hr class="shotLine"/>
+            </div>
+            <div class="col-10 container">
+              <div class="row " *ngFor="let step of studentFlow;index as i">
+                <div class=" col-1 greenBG">
+                </div>
+                <div class="col-1 stepDiv" >
+                  <div class="img-carousel numdiv">
+                    <span>{{i+1}}</span>
+                  </div>
+                </div>
+                <div class="imgdiv col-1">
+                 
+                </div>
+                <div class="textdiv col-9" >
+                  <h6>
+                    {{step.title}}
+                  </h6>
+                  <p>
+                    {{step.discription}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="image howItWorksImg">
+           
+              <img  src="../../../assets/Images/how-it-works/student-2.jpg" alt="" style="height: 150px; width:  auto;">  
+            
+          </div>
+        </div>  -->
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" #faq>
+    <div class="container">
+      <br><br>
+      <div class="col-md-12">
+        <div class="section-title text-center wow zoomIn">
+          <h2 class="home-title"> ! Frequently Asked Questions !</h2>
+        </div>
+      </div>
+
+      <div class="row" id="accordion">
+        <div class="col-md-6">
+          <h3 class="home-title">Student FAQs</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="false">
+            <div class="panel panel-default" *ngFor="let s_faq of student_faq">
+              <div class="panel-heading" role="tab" id="heading{{s_faq.id}}">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{s_faq.id}}"
+                    aria-expanded="false" attr.aria-controls="collapse{{s_faq.id}}">
+                    {{s_faq.question}}
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse{{s_faq.id}}" class="panel-collapse collapse" role="tabpanel"
+                attr.aria-labelledby="heading{{s_faq.id}}" data-parent="#accordion">
+                <div class="panel-body">
+                  <p>{{s_faq.answer}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--- END COL -->
+        <div class="col-md-6">
+          <h3 class="home-title">Tutor FAQs</h3>
+          <div class="panel-group" role="tablist" aria-multiselectable="false">
+            <div class="panel panel-default" *ngFor="let t_faq of tutor_faq">
+              <div class="panel-heading" role="tab" id="heading{{t_faq.id}}">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" attr.data-target="#collapse{{t_faq.id}}"
+                    aria-expanded="false" attr.aria-controls="collapse{{t_faq.id}}">
+                    {{t_faq.question}}
+                  </a>
+                </h4>
+              </div>
+              <div id="collapse{{t_faq.id}}" class="panel-collapse collapse" role="tabpanel"
+                attr.aria-labelledby="heading{{t_faq.id}}" data-parent="#accordion">
+                <div class="panel-body">
+                  <p>{{t_faq.answer}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- END ROW -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Hey Welcome!!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>We are still working on the page.. Will get back soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-us" #contactus>
+    <div class="container">
+      <br><br>
+      <div class="col-md-12">
+        <div class="section-title text-center wow zoomIn">
+          <h2 class="home-title"> ! Contact Us !</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" *ngIf="!isMobile">
+          <img src="../../../assets/Images/desk-office-pen-ruler-2097.jpg" style="height: inherit; width: inherit;">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <br>
+            <br>
+            <div class="form-row clearfix">
+              <input name="name" id="name" type="text" required placeholder="Your Name"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
+            </div>
+            <br>
+            <div class="form-row clearfix">
+              <input name="email" id="email" type="email" required placeholder="Email address"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal" ngModel>
+            </div>
+            <br>
+            <div class="form-row clearfix">
+              <textarea name="comments" id="comments" required placeholder="Your Comments"
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 normal medium" ngModel></textarea>
+            </div>
+            <br>
+            <div class="text-center">
+              <button class="btn btn-primary send" data-toggle="modal" data-target="#contactUsModal">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactUsModalLabel">Congratulations!!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Your query is submitted successfully. We will get back to you soon..</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary send" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>

@@ -1,0 +1,68 @@
+
+<section id="blog-home" #blogList>
+  <div class="container-fluid">
+    <!-- <div class="bg-blog .d-block"> -->
+    <!-- <div class="layer"> -->
+    <img style="height: inherit; width: inherit;" src="../../assets/Images/Blogs/blog-list.jpg" alt="Blog page">
+    <div class="carousel-caption d-md-block">
+      <h1>Blogs</h1>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</section>
+
+<section id="blog-posts">
+  <br><br>
+  <div class="commonStyle">
+    <div class="card-body">
+      <div class=" card-title">
+        <h2 class="home-title">! Blog Posts ! </h2>
+      </div>
+    </div>
+    <div class="row card-row" *ngFor="let blog of blogsContent, let index=index">
+      <div class="column col-md-2" *ngIf="!isMobile">
+        <div class="card card-style h-100">
+          <p class="card-text leftpanel">
+            Author: {{ blog.author }} <br>
+            Date : {{ blog.date }}l<br>
+            Topic: {{ blog.topic }}
+          </p>
+        </div>
+      </div>
+      <div class="column col-md-10">
+        <div class="card card-style container h-100" [routerLink]="[ blog.id ]">
+          <div class="row">
+            <ng-template [ngIf]="isMobile" [ngIfElse]="desktopVersion">
+              <div class="card-body">
+                <h5 class="card-title cardTitle">{{ blog.name }}</h5>
+                <div class="col-md-3">
+                  <img class="imageStyle" src="{{ blog.img }}">
+                </div>
+                <p class="card-text">
+                  {{ blogs[index] }}<br>
+                  <a class="read">Read more...</a>
+                </p>
+              </div>
+            </ng-template>
+            <ng-template #desktopVersion>
+              <div class="col-md-3" *ngIf="index % 2 === 1">
+                <img class="imageStyle" src="{{ blog.img }}">
+              </div>
+              <div class="col-md-9 card-body">
+                <h6 class="card-title cardTitle">{{ blog.name }}</h6>
+                <p class="card-text">
+                  {{ blogs[index] }}<br>
+                  <a class="read">Read more...</a>
+                </p>
+              </div>
+              <div class="col-md-3" *ngIf="index % 2 === 0">
+                <img class="imageStyle" src="{{ blog.img }}">
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
